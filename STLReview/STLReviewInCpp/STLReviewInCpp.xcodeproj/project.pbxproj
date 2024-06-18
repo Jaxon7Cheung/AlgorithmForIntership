@@ -10,6 +10,7 @@
 		A2050FC62C1F701600EC5457 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A2050FC52C1F701600EC5457 /* main.cpp */; };
 		A2050FCD2C1F703300EC5457 /* 句子缩写.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A2050FCC2C1F703200EC5457 /* 句子缩写.cpp */; };
 		A2050FCF2C1F720300EC5457 /* 数字各个位偶数之和.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A2050FCE2C1F720200EC5457 /* 数字各个位偶数之和.cpp */; };
+		A20510102C21FA2500EC5457 /* Cpp链表.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A205100F2C21FA2500EC5457 /* Cpp链表.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -29,6 +30,7 @@
 		A2050FC52C1F701600EC5457 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		A2050FCC2C1F703200EC5457 /* 句子缩写.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = "句子缩写.cpp"; sourceTree = "<group>"; };
 		A2050FCE2C1F720200EC5457 /* 数字各个位偶数之和.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = "数字各个位偶数之和.cpp"; sourceTree = "<group>"; };
+		A205100F2C21FA2500EC5457 /* Cpp链表.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = "Cpp链表.cpp"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +66,7 @@
 				A2050FC52C1F701600EC5457 /* main.cpp */,
 				A2050FCC2C1F703200EC5457 /* 句子缩写.cpp */,
 				A2050FCE2C1F720200EC5457 /* 数字各个位偶数之和.cpp */,
+				A205100F2C21FA2500EC5457 /* Cpp链表.cpp */,
 			);
 			path = STLReviewInCpp;
 			sourceTree = "<group>";
@@ -128,6 +131,7 @@
 				A2050FCD2C1F703300EC5457 /* 句子缩写.cpp in Sources */,
 				A2050FCF2C1F720300EC5457 /* 数字各个位偶数之和.cpp in Sources */,
 				A2050FC62C1F701600EC5457 /* main.cpp in Sources */,
+				A20510102C21FA2500EC5457 /* Cpp链表.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
