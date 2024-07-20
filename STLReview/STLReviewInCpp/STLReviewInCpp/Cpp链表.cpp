@@ -14,7 +14,7 @@ typedef struct ListNode {
     ListNode(int x) : val(x), next(nullptr) {}
 } ListNode;
  
-inline void insertNodeAtTail(ListNode* dummyNode, int val) {
+void insertNodeAtTail(ListNode* dummyNode, int val) {
     ListNode* move = dummyNode;
     while (move->next) {
         move = move->next;
@@ -23,7 +23,7 @@ inline void insertNodeAtTail(ListNode* dummyNode, int val) {
     move->next = newNode;
 }
 
-inline bool insertNodeAtIndex(ListNode* dummyNode, int index, int val) {
+bool insertNodeAtIndex(ListNode* dummyNode, int index, int val) {
     if (index <= 0) return false;
     ListNode* move = dummyNode;
     while (--index) {
@@ -36,7 +36,7 @@ inline bool insertNodeAtIndex(ListNode* dummyNode, int index, int val) {
     return true;
 }
 
-inline bool deleteNodeAtIndex(ListNode* dummyNode, int index) {
+bool deleteNodeAtIndex(ListNode* dummyNode, int index) {
     if (index <= 0) return false;
     ListNode* move = dummyNode;
     while (--index) {
@@ -50,7 +50,7 @@ inline bool deleteNodeAtIndex(ListNode* dummyNode, int index) {
     return true;
 }
  
-inline void printList(ListNode* dummyNode) {
+void printList(ListNode* dummyNode) {
      ListNode* move = dummyNode;
      
      while (move->next) {
@@ -63,8 +63,8 @@ inline void printList(ListNode* dummyNode) {
          }
      }
  }
- 
-inline bool printNode(ListNode* dummyNode, int index) {
+
+bool printNode(ListNode* dummyNode, int index) {
     if (index <= 0) return false;
     ListNode* move = dummyNode;
     while (index--) {
@@ -81,3 +81,8 @@ class Solution {
 public:
     
 };
+
+//int main(int argc, const char * argv[]) {
+//    
+//    return 0;
+//}

@@ -25,3 +25,10 @@ public:
         }
     }
 };
+
+//int main(int argc, const char * argv[]) {
+//    Solution solution;
+////    putchar('u');
+//    solution.doubleSum();
+//    return 0;
+//}

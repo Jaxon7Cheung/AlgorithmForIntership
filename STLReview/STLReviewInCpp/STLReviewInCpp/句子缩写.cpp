@@ -12,11 +12,11 @@ using namespace std;
 
 //  将函数定义为inline，这样可以避免重复定义符号的错误
 
-inline char toUpper(char letter) {
+char toUpper(char letter) {
     return letter - ('a' - 'A');
 }
  
-inline bool isUpper(char letter) {
+bool isUpper(char letter) {
     return (letter >= 'A' && letter <= 'Z') ? 1 : 0;
 }
 
@@ -67,3 +67,10 @@ public:
 
     }
 };
+
+//int main(int argc, const char * argv[]) {
+//    Solution solution;
+////    putchar('u');
+//    solution.sentenceSum();
+//    return 0;
+//}

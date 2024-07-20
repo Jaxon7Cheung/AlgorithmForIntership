@@ -7,10 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		A2050FC62C1F701600EC5457 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A2050FC52C1F701600EC5457 /* main.cpp */; };
 		A2050FCD2C1F703300EC5457 /* 句子缩写.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A2050FCC2C1F703200EC5457 /* 句子缩写.cpp */; };
 		A2050FCF2C1F720300EC5457 /* 数字各个位偶数之和.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A2050FCE2C1F720200EC5457 /* 数字各个位偶数之和.cpp */; };
 		A20510102C21FA2500EC5457 /* Cpp链表.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A205100F2C21FA2500EC5457 /* Cpp链表.cpp */; };
+		A2F2F8702C4BB3F000BCFF9E /* 有效的字母异位词.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A2F2F86F2C4BB3F000BCFF9E /* 有效的字母异位词.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -27,10 +27,10 @@
 
 /* Begin PBXFileReference section */
 		A2050FC22C1F701600EC5457 /* STLReviewInCpp */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = STLReviewInCpp; sourceTree = BUILT_PRODUCTS_DIR; };
-		A2050FC52C1F701600EC5457 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		A2050FCC2C1F703200EC5457 /* 句子缩写.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = "句子缩写.cpp"; sourceTree = "<group>"; };
 		A2050FCE2C1F720200EC5457 /* 数字各个位偶数之和.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = "数字各个位偶数之和.cpp"; sourceTree = "<group>"; };
 		A205100F2C21FA2500EC5457 /* Cpp链表.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = "Cpp链表.cpp"; sourceTree = "<group>"; };
+		A2F2F86F2C4BB3F000BCFF9E /* 有效的字母异位词.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = "有效的字母异位词.cpp"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,6 +47,7 @@
 		A2050FB92C1F701600EC5457 = {
 			isa = PBXGroup;
 			children = (
+				A2F2F7BA2C46AA0700BCFF9E /* AllSortsOfSortFunc */,
 				A2050FC42C1F701600EC5457 /* STLReviewInCpp */,
 				A2050FC32C1F701600EC5457 /* Products */,
 			);
@@ -63,11 +64,19 @@
 		A2050FC42C1F701600EC5457 /* STLReviewInCpp */ = {
 			isa = PBXGroup;
 			children = (
-				A2050FC52C1F701600EC5457 /* main.cpp */,
 				A2050FCC2C1F703200EC5457 /* 句子缩写.cpp */,
+				A2F2F86F2C4BB3F000BCFF9E /* 有效的字母异位词.cpp */,
 				A2050FCE2C1F720200EC5457 /* 数字各个位偶数之和.cpp */,
 				A205100F2C21FA2500EC5457 /* Cpp链表.cpp */,
 			);
+			path = STLReviewInCpp;
+			sourceTree = "<group>";
+		};
+		A2F2F7BA2C46AA0700BCFF9E /* AllSortsOfSortFunc */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = AllSortsOfSortFunc;
 			path = STLReviewInCpp;
 			sourceTree = "<group>";
 		};
@@ -128,9 +137,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A2F2F8702C4BB3F000BCFF9E /* 有效的字母异位词.cpp in Sources */,
 				A2050FCD2C1F703300EC5457 /* 句子缩写.cpp in Sources */,
 				A2050FCF2C1F720300EC5457 /* 数字各个位偶数之和.cpp in Sources */,
-				A2050FC62C1F701600EC5457 /* main.cpp in Sources */,
 				A20510102C21FA2500EC5457 /* Cpp链表.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
