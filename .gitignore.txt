@@ -1,7 +1,0 @@
-# macOS
-.DS_Store
-
-# Xcode
-STLReview.xcworkspace
-STLReview.xcuserdata
-DerivedData/
