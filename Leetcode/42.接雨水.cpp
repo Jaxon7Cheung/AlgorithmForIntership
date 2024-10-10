@@ -13,7 +13,7 @@ using namespace std;
 
 // 从宽度的角度
 
-// 时间：O(n)两个指针移动总次数不超过n、空间：O(1)常数级额外空间
+// 时间：O(2n)=O(n)每个下标最多只会入栈和出栈各一次、空间：O(n)栈的大小不会超过n
 class Solution {
 public:
     // 单调栈
