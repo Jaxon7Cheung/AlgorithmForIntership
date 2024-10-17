@@ -18,61 +18,75 @@ struct ListNode {
 };
 
 class Solution {
-    // 链表的中间结点
+private:
+    // 快慢指针找中间结点
     ListNode* middleNode(ListNode* head) {
-        ListNode* slow = head, *fast = head;
+        ListNode* slow = head;
+        ListNode* fast = head;
+        
+        // 奇数结点 && 偶数结点
         while (fast && fast->next) {
             slow = slow->next;
             fast = fast->next->next;
         }
+
         return slow;
     }
-
+    
     // 反转链表
-    ListNode* reverseList(ListNode* head) {
-        ListNode* pre = nullptr, *cur = head;
+    ListNode* reverseListNode(ListNode* head) {
+        ListNode* pre = nullptr;
+        ListNode* cur = head;
+
         while (cur) {
-            ListNode* nxt = cur->next;
+            ListNode* tmp = cur->next;
             cur->next = pre;
             pre = cur;
-            cur = nxt;
+            cur = tmp;
         }
         return pre;
+        
     }
 
 public:
+    // 双指针链表重排（头尾交叉）
     void reorderList(ListNode* head) {
-        ListNode* mid = middleNode(head);
-        ListNode* head2 = reverseList(mid);
-        while (head2->next) {
-            ListNode* nxt = head->next;
-            ListNode* nxt2 = head2->next;
-            head->next = head2;
-            head2->next = nxt;
-            head = nxt;
-            head2 = nxt2;
+        ListNode* middle = middleNode(head);
+        middle = reverseListNode(middle);
+
+        ListNode* l = head;
+        ListNode* r = middle;
+
+        while (r->next) {
+            ListNode* nextL = l->next;
+            ListNode* nextR = r->next;
+            l->next = r;
+            r->next = nextL;
+            l = nextL;
+            r = nextR;
         }
+        
     }
 };
 
-void printList(ListNode* head) {
-    ListNode* cur = head;
-    while (cur) {
-        cout << cur->val << ' ';
-        cur = cur->next;
+void printListNode(ListNode* head) {
+    ListNode* move = head;
+    while (move) {
+        cout << move->val << ' ';
+        move = move->next;
     }
 }
  
 int main() {
     ListNode* node = new ListNode(2);
     node->next = new ListNode(6);
-    node->next->next = new ListNode(9);
+    node->next->next = new ListNode(77);
     node->next->next->next = new ListNode(8);
     node->next->next->next->next = new ListNode(17);
     
     Solution solution;
     solution.reorderList(node);
-    printList(node);
+    printListNode(node);
 
     return 0;
 }
