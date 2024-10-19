@@ -33,6 +33,9 @@ private:
         int i = 0;
         int n = s.size();
 
+        // 处理一元运算 "-(2 +3)"
+        char pre = '0';
+
         while (i < n) {
             char ch = s[i];
             Node cur;
@@ -42,10 +45,12 @@ private:
                 continue;
             }
             if (ch == '(') {
+                pre = '(';
                 cur.ope = '(';
                 stk.push(cur);
                 i++;
             } else if (ch == ')') {
+                pre = ')';
                 while (!stk.empty() && stk.top().ope != '(') {
                     q.push(stk.top());
                     stk.pop();
@@ -54,6 +59,8 @@ private:
                 stk.pop();
                 i++;
             } else if (ch >= '0' && ch <= '9') {
+                pre = '1';
+
                 int num = 0;
                 while (i < n && (s[i] >= '0' && s[i] <= '9')) {
                     num = num * 10 + (s[i] - '0');
@@ -64,6 +71,15 @@ private:
                 q.push(cur);
             } else {
                 // 符号
+
+                // 处理一元运算 "-(2 +3)"
+                if (pre == '0' || pre == '(') {
+                    Node node;
+                    node.val = 0;
+                    node.isOpe = false;
+                    q.push(node);
+                }
+
                 while (!stk.empty() && map[ch] <= map[stk.top().ope]) {
                     q.push(stk.top());
                     stk.pop();
@@ -125,7 +141,7 @@ public:
 };
  
 int main(void) {
-    string s = "1 +  (4+5+2)*3 + 6/ 2";
+    string s = "-1 +  (-(4+5+2)*3) + 6/ 2";
 //    string s = "1+4+5+2*3+6/2";
 //    string s = "1+6";
     
