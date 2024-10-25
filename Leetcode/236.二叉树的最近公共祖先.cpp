@@ -18,12 +18,28 @@ struct TreeNode {
 class Solution {
 public:
     TreeNode* lowestCommonAncestor(TreeNode* root, TreeNode* p, TreeNode* q) {
+        // 出口条件
+        // 只要当前根节点是p和q中的任意一个，就返回（因为不能比这个更深了，再深p和q中的一个就没了）
         if (!root || p == root || q == root) return root;
-        TreeNode* left = lowestCommonAncestor(root->left, p, q);
-        TreeNode* right = lowestCommonAncestor(root->right, p, q);
-        if (!left && !right) return nullptr;
-        if (!left) return right;
-        if (!right) return left;
+
+        // 根节点不是p和q中的任意一个，递归遍历在左右子树中找p,q
+        TreeNode* leftRet = lowestCommonAncestor(root->left, p, q);
+        TreeNode* rightRet = lowestCommonAncestor(root->right, p, q);
+
+        // 到上一层进行回溯，当节点p,q在节点root的异侧时，当前root即为最近公共祖先
+
+        // 返回结点都为空，p,q都不在root的左/右子树中
+        if (!leftRet && !rightRet) return nullptr; // 可注释掉合并
+        // 返回的只有左结点为空，返回右子树结果
+        // p/q在root的右子树中，返回的是p/q
+        // p,q都在root的右子树中，返回的是最近公共祖先
+        if (!leftRet) return rightRet;
+        // 返回的只有右结点为空，返回左子树结果
+        // p/q在root的左子树中，返回的是p/q
+        // p,q都在root的左子树中，返回的是最近公共祖先
+        if (!rightRet) return leftRet;
+
+        // 同时不为空，就说明p,q在当前root的异侧，root即为最近公共祖先
         // if (left && right) return root;
         return root;
     }
