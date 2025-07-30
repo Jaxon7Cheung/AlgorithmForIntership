@@ -18,7 +18,7 @@
  */
 class Solution {
 public:
-    // 从targetSum开始，不断地减去路径上的节点值，如果走到叶子节点发现 targetSum == 0，就说明我们找到了一条符合题目要求的路径
+    // 减去路径上的节点值，走到🍃叶子节点发现 targetSum == 0即可
     bool hasPathSum(TreeNode* root, int targetSum) {
         if (!root) return false;
         targetSum -= root->val;
@@ -29,7 +29,7 @@ public:
         }
 
         return hasPathSum(root->left, targetSum)
-            || hasPathSum(root->right, targetSum);;
+            || hasPathSum(root->right, targetSum);
     }
 };
 // @lc code=end
